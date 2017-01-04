@@ -1,3 +1,4 @@
+# coding:utf-8
 """my_blog URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -21,7 +22,11 @@ from datetime import datetime
 #import article
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', home),
-    url(r'^(?P<my_args>\d+)/$', detail, name='detail'),
-    url(r'^test/$', test),
+    url(r'^$', home,name = 'home'),
+    url(r'^(?P<id>\d+)/$', detail, name='detail'),
+    url(r'^archives/$', archives,name = 'archives'),
+    url(r'^aboutme/$', about_me, name = 'about_me'),
+    url(r'^tag/(?P<tag>\w+)/$', search_tag, name = 'search_tag'),
+    url(r'^search/$',blog_search, name = 'search'),
+    url(r'^feed/$', RSSFeed(), name = "RSS"),  #新添加的urlconf, 并将name设置为RSS, 方便在模板中使用url
 ]

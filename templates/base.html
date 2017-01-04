@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
     <link rel="stylesheet" href="http://picturebag.qiniudn.com/blog.css">
+    <link rel="stylesheet" href="http://picturebag.qiniudn.com/monokai.css">
 </head>
 <body>
 <div id="layout" class="pure-g">
@@ -19,10 +20,28 @@
             <nav class="nav">
                 <ul class="nav-list">
                     <li class="nav-item">
+                        <a class="button-success pure-button" href="/">主页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-success pure-button" href="/archives">归档</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="pure-button" href="https://github.com/Andrew-liu">Github</a>
                     </li>
                     <li class="nav-item">
                         <a class="pure-button" href="http://weibo.com/dinosaurliu">Weibo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-success pure-button" href="/">专题</a>
+                    </li>
+                    <form class="pure-form" action="/search/" method="get">
+                    <input class="pure-input-3-3" type="text" name="s" placeholder="search">
+                    </form>
+                    <li class="nav-item">
+                        <a class="button-success pure-button" href="/aboutme">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-success pure-button" href="{% url "RSS" %}">RSS</a>
                     </li>
                 </ul>
             </nav>
